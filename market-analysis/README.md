@@ -5,7 +5,7 @@ Separate from the token metadata in `data/`; nothing here is read by `bin/genera
 
 | Folder | Contents |
 | --- | --- |
-| [`2026-10-chip-selloff/`](2026-10-chip-selloff/) | October 2026 tech/chip selloff: market vs. sectors, what drove XLK's drop, why Nvidia lagged the rebound |
+| [`2026-10-chip-selloff/`](2026-10-chip-selloff/) | October 2026 tech/chip selloff: market vs. sectors, what drove XLK's drop, why Nvidia lagged the rebound, big-tech capex scorecard |
 | [`tools/`](tools/) | `massive_indices_ws.py` — streams per-minute index bars from Massive's WebSocket API |
 
 ## Running the tools

@@ -51,6 +51,25 @@ Google selling TPUs and OpenAI reportedly buying them (Oct 28–29), customer-fi
 worries (CoreWeave downgrade, bond-market stress, "circular financing"), weaker-than-hoped
 China shipments, and "AI bubble" commentary aimed at the largest company.
 
+## 4. Big-tech capex scorecard (Oct 28–29 reports)
+
+| | Microsoft | Alphabet | Amazon |
+| --- | --- | --- | --- |
+| Quarterly capex | $45.2B (+29.5% YoY) | $51.4B (>2× YoY, record) | $77.3B (>2× YoY) |
+| Full-year plan | $170B for 2026 | $195–205B for 2026 (pre-earnings figure) | $220B for 2026 |
+| Cloud growth | Azure +48% (49–50% guided) | Google Cloud +103% to $30.7B | AWS +39% to $46B (>40% guided for 2027–28) |
+| Free cash flow | Positive, down 27% | −$9.1B (2nd negative quarter) | −$42.4B trailing 12 months |
+| Results vs. estimates | Beat | Missed EPS; Search +12% | Missed revenue and EPS |
+| Stock, Oct 29 close | −0.2% | −12.6% | −4.3% |
+
+Combined quarterly capex is about $174B; 2026 plans total roughly $590B, plus Meta's
+$135–145B. Spending keeps rising (75% of Microsoft's went to GPUs and CPUs), but the
+market rewarded the company still generating cash and punished the two burning it.
+Nvidia slipped on both days (−1.2%, −0.8%).
+
+Capex, cash-flow and guidance figures come from news coverage of the reports; financial
+statements aren't in the current Massive plan. Stock moves are Massive daily closes.
+
 ## Regenerating the charts
 
 ```bash
