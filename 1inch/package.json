@@ -1,0 +1,12 @@
+{
+  "name": "1inch-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Small scripts that call the 1inch Business API (balances, swap quotes, cross-chain quotes).",
+  "scripts": {
+    "crosschain-quote": "node crosschain-quote.js"
+  },
+  "dependencies": {
+    "axios": "^1.21.0"
+  }
+}
