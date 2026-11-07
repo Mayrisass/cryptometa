@@ -7,6 +7,7 @@ Small, read-only scripts for the [1inch Business API](https://business.1inch.com
 | `balances.py` | Token balances for a wallet | `GET /balance/v1.2/{chainId}/balances/{wallet}` |
 | `quote.py` | Classic swap quote (default 1 ETH → USDC) | `GET /swap/v6.1/{chainId}/quote` |
 | `crosschain-quote.js` | Fusion+ cross-chain quote (0.1 WETH Ethereum → USDC.e Polygon) | `GET /fusion-plus/quoter/v1.2/quote/receive` |
+| `portfolio-status.js` | Portfolio API service status (`is_available`) | `GET /portfolio/portfolio/v5.0/general/status` |
 
 ## API key
 
@@ -32,6 +33,7 @@ python3 quote.py 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 0xdAC17F958D2ee523a2
 # Cross-chain quote (Node + axios)
 npm install
 node crosschain-quote.js 0xYourWallet               # wallet is optional
+node portfolio-status.js                            # Portfolio API health check
 ```
 
 Balance and quote amounts from the API are raw on-chain units; divide by `10^decimals` for the token. The free Dev plan allows 1 request per second.
