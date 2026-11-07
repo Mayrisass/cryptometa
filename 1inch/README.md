@@ -10,6 +10,7 @@ Small, read-only scripts for the [1inch Business API](https://business.1inch.com
 | `portfolio-status.js` | Portfolio API service status (`is_available`) | `GET /portfolio/portfolio/v5.0/general/status` |
 | `block-number.py` | Latest block via the Web3 RPC (`eth_blockNumber`) | `POST /web3/{chainId}` |
 | `gas-price.py` | Current gas prices: base fee plus low/medium/high/instant tiers, in gwei | `GET /gas-price/v1.6/{chainId}` |
+| `spot-price.py` | Token spot prices in USD (default: WETH, WBTC, USDC, USDT, DAI, 1INCH) | `GET /price/v1.1/{chainId}/{addresses}` |
 
 ## API key
 
@@ -38,6 +39,10 @@ CHAIN_ID=137 python3 block-number.py                # Polygon
 
 # Gas prices in gwei
 python3 gas-price.py
+
+# Spot prices in USD; pass token addresses, or set CURRENCY= for wei of the native coin
+python3 spot-price.py
+python3 spot-price.py 0xTokenA 0xTokenB
 
 # Cross-chain quote (Node + axios)
 npm install
