@@ -9,6 +9,7 @@ Small, read-only scripts for the [1inch Business API](https://business.1inch.com
 | `crosschain-quote.js` | Fusion+ cross-chain quote (0.1 WETH Ethereum → USDC.e Polygon) | `GET /fusion-plus/quoter/v1.2/quote/receive` |
 | `portfolio-status.js` | Portfolio API service status (`is_available`) | `GET /portfolio/portfolio/v5.0/general/status` |
 | `block-number.py` | Latest block via the Web3 RPC (`eth_blockNumber`) | `POST /web3/{chainId}` |
+| `gas-price.py` | Current gas prices: base fee plus low/medium/high/instant tiers, in gwei | `GET /gas-price/v1.6/{chainId}` |
 
 ## API key
 
@@ -34,6 +35,9 @@ python3 quote.py 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 0xdAC17F958D2ee523a2
 # Latest block number via the Web3 RPC (JSON-RPC eth_blockNumber)
 python3 block-number.py
 CHAIN_ID=137 python3 block-number.py                # Polygon
+
+# Gas prices in gwei
+python3 gas-price.py
 
 # Cross-chain quote (Node + axios)
 npm install
