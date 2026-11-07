@@ -8,6 +8,7 @@ Small, read-only scripts for the [1inch Business API](https://business.1inch.com
 | `quote.py` | Classic swap quote (default 1 ETH → USDC) | `GET /swap/v6.1/{chainId}/quote` |
 | `crosschain-quote.js` | Fusion+ cross-chain quote (0.1 WETH Ethereum → USDC.e Polygon) | `GET /fusion-plus/quoter/v1.2/quote/receive` |
 | `portfolio-status.js` | Portfolio API service status (`is_available`) | `GET /portfolio/portfolio/v5.0/general/status` |
+| `block-number.py` | Latest block via the Web3 RPC (`eth_blockNumber`) | `POST /web3/{chainId}` |
 
 ## API key
 
@@ -29,6 +30,10 @@ CHAIN_ID=8453 python3 balances.py 0xYourWallet      # Base
 # Classic swap quote: [src] [dst] [amount in the token's smallest unit]
 python3 quote.py                                    # 1 ETH -> USDC
 python3 quote.py 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 0xdAC17F958D2ee523a2206206994597C13D831ec7 100000000
+
+# Latest block number via the Web3 RPC (JSON-RPC eth_blockNumber)
+python3 block-number.py
+CHAIN_ID=137 python3 block-number.py                # Polygon
 
 # Cross-chain quote (Node + axios)
 npm install
