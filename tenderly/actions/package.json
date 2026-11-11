@@ -1,0 +1,9 @@
+{
+  "name": "tenderly-actions",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tenderly Web3 Actions for the cryptometa scripts.",
+  "scripts": {
+    "test": "node test-webhook.js"
+  }
+}
