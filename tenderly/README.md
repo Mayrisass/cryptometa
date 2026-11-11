@@ -28,3 +28,19 @@ python3 ../1inch/gas-price.py | jq -Rs '{gas: .}' | python3 webhook.py -   # pay
 ```
 
 The script prints the HTTP status, the response body and the remaining Tenderly call quota. A `200 {}` means Tenderly accepted the payload and queued a run; whether the action itself succeeded shows up in the action's **Execution History** in the Tenderly dashboard. Inside the action, the payload is available as the webhook event's `payload`.
+
+## The action (`actions/webhook.js`)
+
+The receiving side, built from Tenderly's webhook action template (`actionFn` and the export are unchanged). For each call it:
+
+- fails the run if the payload is not a JSON object, so bad calls show as failed in Execution History;
+- logs the payload;
+- stores the latest payload with a timestamp under `webhook/last-payload` and a running count under `webhook/count` in the project's Web3 Actions storage.
+
+Test it locally (no Tenderly account needed):
+
+```sh
+cd actions && node test-webhook.js
+```
+
+Deploy with the [Tenderly CLI](https://github.com/Tenderly/tenderly-cli): set your account and project slugs in `tenderly.yaml` (replace `ACCOUNT/PROJECT`), then run `tenderly login` and `tenderly actions deploy` from this folder. If you paste the code into the dashboard editor instead, use the contents of `actions/webhook.js`. To require auth on the webhook, set `authenticated: true` in `tenderly.yaml` and send the key with `TENDERLY_ACCESS_KEY`.

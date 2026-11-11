@@ -1,0 +1,16 @@
+# Tenderly Web3 Actions config. Replace ACCOUNT/PROJECT with your Tenderly account and
+# project slugs (from the dashboard URL), then deploy from this folder: tenderly actions deploy
+account_id: ""
+actions:
+  ACCOUNT/PROJECT:
+    runtime: v2
+    sources: actions
+    specs:
+      webhook-handler:
+        description: Logs and stores payloads sent to the webhook trigger.
+        function: webhook:actionFn
+        execution_type: parallel
+        trigger:
+          type: webhook
+          webhook:
+            authenticated: false
